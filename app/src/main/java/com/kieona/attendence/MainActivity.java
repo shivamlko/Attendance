@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        username = (EditText) findViewById(R.id.username);
+        usernameEditText = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         loginBtn = (Button) findViewById(R.id.loginBtn);
         context = MainActivity.this;
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user = username.getText().toString();
+                user = usernameEditText.getText().toString();
                 pass = password.getText().toString();
 
                 if (!TextUtils.isEmpty(user) && !TextUtils.isEmpty(pass))
